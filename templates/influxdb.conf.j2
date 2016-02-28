@@ -169,12 +169,12 @@ reporting-disabled = false
     batch-timeout = "{{ udp.batch_timeout }}"
   {% else %}
     batch-timeout = "1s"
-  {% endif %} 
+  {% endif %}
   {% if 'batch_pending' in udp %}
     batch-pending = {{ udp.batch_pendign }}
   {% else %}
     batch-pending = 5
-  {% endif %} 
+  {% endif %}
 {% endfor %}
 {% endif %}
 
@@ -201,7 +201,7 @@ reporting-disabled = false
 ###
 
 [hinted-handoff]
-  enabled = true
+  enabled = false
   dir = "/var/opt/influxdb/hh"
   max-size = 1073741824
   max-age = "168h"
